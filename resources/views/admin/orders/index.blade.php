@@ -61,7 +61,8 @@
                                 @else
                                     {{ link_to_route('order.confirm','Confirm', $order->id, ['class'=>'btn btn-success btn-sm']) }}
                                 @endif
-{{--                                {{ link_to_route('order.show','Details', $order->id, ['class'=>'btn btn-success btn-sm']) }}--}}
+
+                                {{ link_to_route('orders.show','Details', $order->id, ['class'=>'btn btn-success btn-sm']) }}
 
                             </td>
                         </tr>

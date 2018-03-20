@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li>
-                <a href="products/create">
+                <a href="{{ url('/products/create') }}">
                     <i class="ti-archive"></i>
                     <p>Add Product</p>
                 </a>
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ url('/orders') }}">
                     <i class="ti-calendar"></i>
                     <p>Orders</p>
                 </a>
