@@ -1,11 +1,11 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Laravel Simple eCommerce app
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+[![Front view](https://s18.postimg.cc/970pva44p/image.png)](https://postimg.cc/image/72gcu72hx/)
+
+[![Dashboard](https://s18.postimg.cc/5andzjqxl/image.png)](https://postimg.cc/image/fxh74yz2t/)
+
+[![Adding product & form validation](https://s18.postimg.cc/sovdbi3q1/image.png)](https://postimg.cc/image/pi0trvj9x/)
+
 
 ## About Laravel
 

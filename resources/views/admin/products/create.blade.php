@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="content">
-                    {!! Form::open(['url' => 'products', 'files'=>'true']) !!}
+                    {!! Form::open(['url' => 'admin/products', 'files'=>'true']) !!}
                     <div class="row">
                         <div class="col-md-12">
 
