@@ -49,7 +49,7 @@ class ProductController extends Controller
 
         // Redirect
 
-        return redirect('products/create');
+        return redirect('admin/products/create');
 
     }
 
@@ -96,7 +96,7 @@ class ProductController extends Controller
         $request->session()->flash('msg', 'Product has been updated');
 
         // Redirect
-        return redirect('/products');
+        return redirect('admin/products');
 
     }
 
@@ -113,7 +113,7 @@ class ProductController extends Controller
         session()->flash('msg','Product has been deleted');
 
         // Redirect back
-        return redirect('/products');
+        return redirect('admin/products');
 
 
     }

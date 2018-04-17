@@ -4829,7 +4829,7 @@ jQuery.event = {
 				}
 			}
 
-			// Add to the element's handler list, delegates in front
+			// Add to the element's handler list, delegates in Front
 			if ( selector ) {
 				handlers.splice( handlers.delegateCount++, 0, handleObj );
 			} else {
@@ -6024,7 +6024,7 @@ var nodeNames = "abbr|article|aside|audio|bdi|canvas|data|datalist|details|figca
 		td: [ 3, "<table><tbody><tr>", "</tr></tbody></table>" ],
 
 		// IE6-8 can't serialize link, script, style, or any html5 (NoScope) tags,
-		// unless wrapped in a div with non-breaking characters in front of it.
+		// unless wrapped in a div with non-breaking characters in Front of it.
 		_default: jQuery.support.htmlSerialize ? [ 0, "", "" ] : [ 1, "X<div>", "</div>"  ]
 	},
 	safeFragment = createSafeFragment( document ),

@@ -25,7 +25,7 @@ class OrderController extends Controller
         session()->flash('msg','Order has been confirmed');
 
         // Redirect the page
-        return redirect('/orders');
+        return redirect('admin/orders');
 
 
     }
@@ -44,7 +44,7 @@ class OrderController extends Controller
         session()->flash('msg','Order has been again into pending');
 
         // Redirect the page
-        return redirect('/orders');
+        return redirect('admin/orders');
 
     }
 

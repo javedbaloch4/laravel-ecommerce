@@ -1,0 +1,35 @@
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.card {
+    height: 100%;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    background-image: url('../img/banner.jpg');
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em .5em;
+}
+
+.navbar {
+    background: #4A5678 !important;
+}
+
+.nav-link {
+    color: #FFF !important;
+}
+
+#register {
+    margin: 50px 0;
+}
