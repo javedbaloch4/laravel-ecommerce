@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Order;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\User;
 
 class UserProfileController extends Controller
@@ -17,6 +16,7 @@ class UserProfileController extends Controller
     }
 
     public function show($id) {
-        dd($id);
+        $order = Order::find($id);
+        return view('front.profile.details', compact('order'));
     }
 }
