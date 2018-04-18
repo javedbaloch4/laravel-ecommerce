@@ -30,7 +30,6 @@
                         </thead>
                         <tbody>
                         <tr>
-
                             @foreach ($orders as $order)
                                 <td>{{ $order->id }}</td>
                                 <td>{{ $order->user->name }}</td>

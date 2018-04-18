@@ -7,6 +7,12 @@ use App\Http\Controllers\Controller;
 
 class SessionsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
     public function index() {
         return view('front.sessions.index');
     }
@@ -39,8 +45,6 @@ class SessionsController extends Controller
         session()->flash('msg','You have been logged out successfully');
 
         return redirect('/user/login');
-
-
 
     }
 
