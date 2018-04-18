@@ -49,4 +49,5 @@ Route::post('/user/login','Front\SessionsController@store');
 Route::get('/user/logout','Front\SessionsController@logout');
 
 Route::get('/user/profile', 'Front\UserProfileController@index');
+Route::get('/user/order/{id}','Front\UserProfileController@show');
 
