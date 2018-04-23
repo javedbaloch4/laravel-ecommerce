@@ -1,7 +1,5 @@
 @extends('front.layouts.master')
 
-
-
 @section('content')
     <!-- Jumbotron Header -->
         <header class="jumbotron my-4">
