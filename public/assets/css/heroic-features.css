@@ -33,3 +33,31 @@ body {
 #register {
     margin: 50px 0;
 }
+
+/* Cart Page */
+.cart-items table td{
+    color: #666;
+    font-size: 15px;
+}
+
+.cart-items table td a {
+    font-size: 13px;
+    color: #555;
+}
+
+.btn-link-dark {
+    font-size: 13px;
+    color: #555;
+}
+
+.cart-items .table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+/* Checkout  */
+
+.your-order-table td {
+    font-size: 14px;
+    color: #666;
+    vertical-align: middle;
+}

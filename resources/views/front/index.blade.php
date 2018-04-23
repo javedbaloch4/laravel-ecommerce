@@ -8,8 +8,13 @@
             <p class="display-4">&nbsp;</p>
             <a href="#" class="btn btn-warning btn-lg float-right">SHOP NOW!</a>
         </header>
+    @if ( session()->has('msg') )
+        <div class="alert alert-success">{{ session()->get('msg') }}</div>
+    @endif
+
 
     <div class="row text-center">
+
 
     @foreach ($products as $product)
         <div class="col-lg-3 col-md-6 mb-4">
@@ -23,8 +28,14 @@
                 </div>
                 <div class="card-footer">
                     <strong>${{ $product->price }}</strong> &nbsp;
-                    <a href="#" class="btn btn-primary btn-outline-dark"><i class="fa fa-cart-plus "></i> Add To
-                        Cart</a>
+                    <form action="{{ route('cart') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $product->id }}">
+                        <input type="hidden" name="name" value="{{ $product->name }}">
+                        <input type="hidden" name="price" value="{{ $product->price }}">
+                    <button type="submit" class="btn btn-primary btn-outline-dark"><i class="fa fa-cart-plus "></i> Add To
+                        Cart</button>
+                    </form>
                 </div>
             </div>
         </div>
