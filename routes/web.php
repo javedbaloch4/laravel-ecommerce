@@ -62,6 +62,10 @@ Route::post('/cart/saveLater/{product}', 'Front\CartController@saveLater')->name
 Route::delete('/saveLater/destroy/{product}','Front\SaveLaterController@destroy')->name('saveLater.destroy');
 Route::post('/cart/moveToCart/{product}','Front\SaveLaterController@moveToCart')->name('moveToCart');
 
+// Checkout
+Route::get('/checkout','Front\CheckoutController@index');
+Route::post('/checkout','Front\CheckoutController@store')->name('checkout');
+
 Route::get('empty', function() {
     Cart::instance('default')->destroy();
 });
