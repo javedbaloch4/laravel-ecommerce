@@ -121,6 +121,6 @@
         </div>
     </div>
 
-    <a href="{{ url('/orders') }}" class="btn btn-success">Back to Orders</a>
+    <a href="{{ url('/admin/orders') }}" class="btn btn-success">Back to Orders</a>
     
 @endsection
