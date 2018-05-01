@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'secret' => 'sk_test_CVw9HdLEtj1dc31SlCTEcxkt'
+        'secret' => env('STRIPE_SECRET')
     ]
 
 ];

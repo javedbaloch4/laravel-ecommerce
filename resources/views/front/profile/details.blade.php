@@ -17,9 +17,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Date</th>
-                        <th>Quantity</th>
                         <th>Address</th>
-                        <th>Price</th>
                         <th>Status</th>
                     </tr>
                     </thead>
@@ -27,9 +25,7 @@
                     <tr>
                         <td>{{ $order->id }}</td>
                         <td>{{ $order->date }}</td>
-                        <td>{{ $order->orderItems[0]->quantity }}</td>
                         <td>{{ $order->address }}</td>
-                        <td>{{ $order->orderItems[0]->price }}</td>
                         <td>
                             @if ($order->status)
                                 <span class="badge badge-success">Confirmed</span>
@@ -76,30 +72,57 @@
             <hr>
             <div class="content table-responsive table-full-width">
                 <table class="table table-bordered table-striped">
-                    <thead>
                     <tr>
-                        <th>ID</th>
-                        <td>{{ $order->products[0]->id }}</td>
-                    </tr>
-                    <tr>
-                        <th>Name</th>
-                        <td>{{ $order->products[0]->name }}</td>
-                    </tr>
-                    <tr>
+                        <th>Order ID</th>
+                        <th>Product Name</th>
                         <th>Price</th>
-                        <td>{{ $order->products[0]->price }}</td>
+                        <th>Quantity</th>
+                        <th>Image</th>
                     </tr>
                     <tr>
-                        <th>Image</th>
+                        <td>{{ $order->id }}</td>
                         <td>
-                            <a href="{{ url('uploads/', $order->products[0]->image) }}" target="_blank"><img
-                                        src="{{ url('uploads/', $order->products[0]->image) }}"
-                                        alt="{{ $order->products[0]->image }}" class="img-thumbnail"
-                                        style="width: 100px"></a>
+                            @foreach ($order->products as $product)
+                                <table class="table">
+                                    <tr>
+                                        <td>{{ $product->name }}</td>
+                                    </tr>
+                                </table>
+                            @endforeach
+                        </td>
+
+                        <td>
+                            @foreach ($order->orderItems as $item)
+                                <table class="table">
+                                    <tr>
+                                        <td>{{ $item->price }}</td>
+                                    </tr>
+                                </table>
+                            @endforeach
+                        </td>
+
+                        <td>
+                            @foreach ($order->orderItems as $item)
+                                <table class="table">
+                                    <tr>
+                                        <td>{{ $item->quantity }}</td>
+                                    </tr>
+                                </table>
+                            @endforeach
+                        </td>
+
+                        <td>
+                            @foreach ($order->products as $product)
+                                <table class="table">
+                                    <tr>
+                                        <td><img src="{{ url('uploads') . '/' . $product->image }}" alt=""
+                                                 style="width: 2em"></td>
+                                    </tr>
+                                </table>
+                            @endforeach
                         </td>
                     </tr>
 
-                    </thead>
                 </table>
 
             </div>

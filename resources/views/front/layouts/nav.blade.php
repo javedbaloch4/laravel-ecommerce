@@ -8,9 +8,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('cart') }}"><i class="fa fa-shopping-cart"></i> Cart
-                        @if ( Cart::instance('default')->count() > 0 )
-                            <strong>({{ Cart::instance('default')->count() }})</strong>
+                    <a class="nav-link" href="/cart"><i class="fa fa-shopping-cart"></i> Cart
+                        @if (Cart::instance('default')->count() > 0)
+                            <strong>
+                                ({{ Cart::instance('default')->count() }})
+                            </strong>
                         @endif
                     </a>
                 </li>
@@ -24,7 +26,9 @@
                             <a class="dropdown-item " href="{{  url('user/login') }}">Sign In</a>
                             <a class="dropdown-item" href="{{  url('user/register') }}">Sign Up</a>
                         @else
-                            <a class="dropdown-item" href="{{  url('user/logout') }}">Logout</a>
+                            <a class="dropdown-item" href="{{  url('user/profile') }}"><i class="fa fa-user"></i> Profile</a>
+                            <hr>
+                            <a class="dropdown-item" href="{{  url('user/logout') }}"><i class="fa fa-lock"></i> Logout</a>
                         @endif
                     </div>
                 </li>

@@ -20,22 +20,48 @@
                         <tr>
                             <th>Order Id</th>
                             <th>Product Name</th>
-                            <th>Address</th>
                             <th>Quantity</th>
                             <th>Total Price</th>
-                            <th>Order Date</th>
                             <th>Status</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach ($orders as $order)
                             <tr>
+
                                 <td>{{ $order->id }}</td>
-                                <td>{{ $order->products[0]->name }}</td>
-                                <td>{{ $order->address }}</td>
-                                <td>{{ $order->orderItems[0]->quantity }}</td>
-                                <td>{{ $order->orderItems[0]->price }}</td>
-                                <td>{{ $order->date }}</td>
+
+                                <td>
+                                    @foreach ($order->products as $item)
+                                        <table class="table">
+                                            <tr>
+                                                <td>{{ $item->name }}</td>
+                                            </tr>
+                                        </table>
+                                    @endforeach
+                                </td>
+
+                                <td>
+                                    @foreach ($order->orderItems as $item)
+                                        <table class="table">
+                                            <tr>
+                                                <td>{{ $item->quantity }}</td>
+                                            </tr>
+                                        </table>
+                                    @endforeach
+                                </td>
+
+                                <td>
+                                    @foreach ($order->orderItems as $item)
+                                        <table class="table">
+                                            <tr>
+                                                <td>${{ $item->price }}</td>
+                                            </tr>
+                                        </table>
+                                    @endforeach
+                                </td>
+
+
                                 <td>
                                     @if($order->status)
                                         <span class="label label-success">Confirmed</span>
